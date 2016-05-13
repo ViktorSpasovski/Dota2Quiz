@@ -18,7 +18,9 @@ namespace Dota2_Quiz
         int multi = 1;
         int guess = 3;
         int score = 0;
+        
         List<Question> questions = new List<Question>();
+        
         Question q1 = new Question("Hand of Midas", new string[] { "branch", "gauntlet", "midas" }, "midas");
         Question q2 = new Question("Mask of Madness", new string[] { "madness", "dominator", "defiance" }, "madness");
         Question q3 = new Question("Ultimate Orb", new string[] { "linken", "ultimate", "energy" }, "ultimate");
