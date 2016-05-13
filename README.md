@@ -17,7 +17,7 @@ ___
 
 Почетниот екран содржи три контроли (new game, highscores и about) кои се подолу објаснети, а тој изгледа вака:
 
-(Слика 1)
+**(Слика 1)**
 
 ![Main screen](/Screenshots/MainScreen.png?raw=true "Main screen")
 
@@ -27,7 +27,7 @@ ___
 
 Тоа изгледа вака:
 
-(Слика 2)
+**(Слика 2)**
 
 ![Game Screen](/Screenshots/NewGame.png?raw=true "Game screen")
 
@@ -41,7 +41,7 @@ ___
 
 Highscores екран:
 
-(Слика 3)
+**(Слика 3)**
 
 ![Highscores](/Screenshots/Highscores.png?raw=true "Highscores")
 
@@ -51,7 +51,7 @@ Highscores екран:
 
 About екран:
 
-(Слика 4)
+**(Слика 4)**
 
 ![About](/Screenshots/About.png?raw=true "About")
 
@@ -59,7 +59,7 @@ About екран:
 
 'Game over' екранот се појавува секој пат кога играчот ќе снема „обиди за погодување“ односно ке изгуби. На овој екран се наоѓа завршниот резултат од играта, како и опција за внесување на име и зачувување на резултат и запишување во Highscores листата.
 
-(Слика 5)
+**(Слика 5)**
 
 ![Game over](/Screenshots/GameOverName.png?raw=true "Game over")
 
@@ -70,3 +70,52 @@ About екран:
 * Секое неточно одговорено прашање го ресетира multiplier-ot на 1х.
 * Секое неточно одговорено прашање го намалува бројот на преостанати обиди (guesses left) за 1.
 * Играта завршува кога играчот ќе има 0 преостанати обиди.
+
+## 3. Претставување на проблемот
+
+#### 3.1 Податочни структури
+
+Сите податоци и функции се иницијализираат само доколку е потребно, со цел да се намали времето на подигнување на апликацијата, што значи дека на пример прашањата се генерираат само доколку е започната нова игра, highscores резултати само доколку се отвори тој екран итн.
+
+Главните елементи на играта се прашањата, а тие се пристапуваат преку листа на објекти од класата `public partial class Question` во која се чуваат информациите се секое од прашањата:
+
+```
+public partial class Question
+    {
+        private string question { get; set; }
+        //the question itself
+        private string[] answers { get; set; }
+        //all the answers
+        public string answer { get; set; }
+        // the correct answer
+        
+        public Question() { }
+
+        public Question(string question, string[] answers, string answer)
+        {
+            this.question = question;
+            this.answers = answers;
+            this.answer = answer;
+        }
+
+        public override string ToString()
+        {
+            return question;
+        }
+
+        public string getAnswer1()
+        {
+            return answers[0];
+        }
+
+        public string getAnswer2()
+        {
+            return answers[1];
+        }
+
+        public string getAnswer3()
+        {
+            return answers[2];
+        }
+    }
+```
