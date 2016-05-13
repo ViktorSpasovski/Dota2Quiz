@@ -16,7 +16,8 @@ ___
 Целата игра се движи низ вкупно 5 екрани, односно (почетниот, new game, highscores, about и game over).
 
 Почетниот екран содржи три контроли (new game, highscores и about) кои се подолу објаснети, а тој изгледа вака:
-![Почетен екран](/Screenshots/MainScreen.png?raw=true "Main screen")
+
+!(/Screenshots/MainScreen.png?raw=true "Main screen")
 
 #### 2.1 New game
 
