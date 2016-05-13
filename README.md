@@ -15,13 +15,13 @@ ___
 
 Целата игра се движи низ вкупно 5 екрани, односно (почетниот, new game, highscores, about и game over).
 
-### 2.1 New game
+#### 2.1 New game
 
 
-### 2.2 Highscores
+#### 2.2 Highscores
 
-### 2.3 About
+#### 2.3 About
 
-### 2.4 Game over
+#### 2.4 Game over
 
-### 2.5 Правила на играта
+#### 2.5 Правила на играта
