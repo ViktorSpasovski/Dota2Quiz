@@ -1,0 +1,9 @@
+d:\dokumenti\documents\visual studio 2015\Projects\Dota2 Quiz\Dota2 Quiz\bin\Debug\Dota2 Quiz.exe.config
+d:\dokumenti\documents\visual studio 2015\Projects\Dota2 Quiz\Dota2 Quiz\bin\Debug\Dota2 Quiz.exe
+d:\dokumenti\documents\visual studio 2015\Projects\Dota2 Quiz\Dota2 Quiz\bin\Debug\Dota2 Quiz.pdb
+d:\dokumenti\documents\visual studio 2015\Projects\Dota2 Quiz\Dota2 Quiz\obj\Debug\Dota2 Quiz.csprojResolveAssemblyReference.cache
+d:\dokumenti\documents\visual studio 2015\Projects\Dota2 Quiz\Dota2 Quiz\obj\Debug\Dota2_Quiz.Properties.Resources.resources
+d:\dokumenti\documents\visual studio 2015\Projects\Dota2 Quiz\Dota2 Quiz\obj\Debug\Dota2 Quiz.csproj.GenerateResource.Cache
+d:\dokumenti\documents\visual studio 2015\Projects\Dota2 Quiz\Dota2 Quiz\obj\Debug\Dota2 Quiz.exe
+d:\dokumenti\documents\visual studio 2015\Projects\Dota2 Quiz\Dota2 Quiz\obj\Debug\Dota2 Quiz.pdb
+D:\DOKUMENTI\Documents\Visual Studio 2015\Projects\Dota2 Quiz\Dota2 Quiz\obj\Debug\Dota2_Quiz.Game.resources
