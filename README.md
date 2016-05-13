@@ -77,7 +77,7 @@ About екран:
 
 Сите податоци и функции се иницијализираат само доколку е потребно, со цел да се намали времето на подигнување на апликацијата, што значи дека на пример прашањата се генерираат само доколку е започната нова игра, highscores резултати само доколку се отвори тој екран итн.
 
-Главните елементи на играта се прашањата, а тие се пристапуваат преку листа на објекти од класата `public partial class Question` во која се чуваат информациите се секое од прашањата:
+Главните елементи на играта се прашањата, а тие се пристапуваат преку листа на објекти од класата `public partial class Question` во која се чуваат информациите за секое од прашањата:
 
 ```
 public partial class Question
@@ -119,3 +119,82 @@ public partial class Question
         }
     }
 ```
+#### 3.2 Прикажување на прашањата
+
+Прашањата се прикажуваат преку повикување на функциијата `newQuestion()` која генерира прашање по случаен избор и ги повлекува соодветните слики за одговорите како и одговорот на прашањето.
+
+```
+public void newQuestion()
+    {
+        Random random = new Random();
+        int r = random.Next(questions.Count);
+        selected = r;
+        question.Text = questions[r].ToString();
+        question.Left = (question.Parent.Width - question.Width) / 2;
+        object ob1 = Resources.ResourceManager.GetObject(questions[r].getAnswer1());
+        one.Image = (Image)ob1;
+        object ob2 = Resources.ResourceManager.GetObject(questions[r].getAnswer2());
+        two.Image = (Image)ob2;
+        object ob3 = Resources.ResourceManager.GetObject(questions[r].getAnswer3());
+        three.Image = (Image)ob3;
+    }
+```
+
+#### 3.3 Зачувување на highscore
+
+Зачувувањето на резултат се повикува преку клик на копчето 'Save highscore' на 'Game over' екранот (види слика 5) и тоа преку функцијата `saveHighscore_Click(object sender, EventArgs e)`, со што воедно се повикува и функцијата `addHighscores()` која ги освежува податоци на 'Highscores' екранот. 
+
+*Функциите можат да се видат подолу.
+
+Сите резултати се чуваат во текстуален фајл `highscores.txt` кој доколку не постои, се креира.
+
+```
+private void saveHighscore_Click(object sender, EventArgs e)
+    {
+        string nameScore = textName.Text + "," + score.ToString() + Environment.NewLine;
+        File.AppendAllText("highscores.txt", nameScore);
+
+        addHighscores();
+        panelHighscores.Visible = true;
+    }
+```
+
+```
+private void addHighscores()
+    {
+        Dictionary<string, int> dict = new Dictionary<string, int>();
+        playersHighscores.Text = "";
+
+        if (File.Exists("highscores.txt"))
+        {
+            string[] scores = File.ReadAllLines("highscores.txt");
+            for (int i = 0; i < scores.Length; i++)
+            {
+                string[] parts = scores[i].Split(',');
+                //playersHighscores.Text = playersHighscores.Text + (i + 1) + ". " + parts[0] + " - " + parts[1] + "\n"; 
+                dict.Add(parts[0], Convert.ToInt32(parts[1]));
+            }
+            var sortedDict = from entry in dict orderby entry.Value descending select entry;
+            sortedDict.ToDictionary(pair => pair.Key, pair => pair.Value);
+
+            int j = 1;
+            foreach (KeyValuePair<string, int> entry in sortedDict)
+            {
+                playersHighscores.Text = playersHighscores.Text + j + ". " + entry.Key + " - " + entry.Value + "\n";
+                j++;
+            }
+        }
+        else
+        {
+            File.Create("highscores.txt").Close();
+            File.WriteAllText("highscores.txt", "Viktor,999\n");
+        }
+        
+    }
+```
+
+#### 3.4 GUI (Graphical User Interface)
+
+За изгледот на оваа апликација се користени панели со цел побрза и поконцентрирана навигација и употреба, односно со употреба на само еден прозорец и менување на изгледот на истиот преку повеќе панели. 
+
+Прикажувањето на одговори како слики е овозможено со `PictureBox` каде што при генерирањето на ново прашање, сликата во истите `PictureBox` се менува според одговорите на соодветното прашање.
