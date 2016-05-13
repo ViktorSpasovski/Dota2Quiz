@@ -2,6 +2,8 @@
 A Dota 2 Quiz game made for college purposes.
 Created and developed by Viktor Spasovski.
 ---
+***
+___
 
 ## 1. Опис на апликацијата
 Апликацијата Dota 2 Quiz е neverending игра која преку интерактивни прашања поврзани со играта им овозможува на корисниците да го тестираат своето знаење од истата.
