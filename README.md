@@ -18,7 +18,7 @@ ___
 Почетниот екран содржи три контроли (new game, highscores и about) кои се подолу објаснети, а тој изгледа вака:
 
 ![Main screen](/Screenshots/MainScreen.png?raw=true "Main screen")
-⋅(слика 1)
+   (слика 1)
 
 #### 2.1 New game
 
@@ -27,8 +27,7 @@ ___
 Тоа изгледа вака:
 
 ![Game Screen](/Screenshots/NewGame.png?raw=true "Game screen")
-
-(слика 2)
+   (слика 2)
 
 Доколку корисникот одлучи дека сака да ја прекине играта со клик на 'X' во горниот десен агол се појавува нов прозорец за потврдување на истото со цел да се избегне ненамерен излез од играта.
 
@@ -41,8 +40,7 @@ ___
 Highscores екран:
 
 ![Highscores](/Screenshots/Highscores.png?raw=true "Highscores")
-
-⋅(слика 3)
+   (слика 3)
 
 #### 2.3 About
 
@@ -51,16 +49,14 @@ Highscores екран:
 About екран:
 
 ![About](/Screenshots/About.png?raw=true "About")
-
-⋅(слика 4)
+   (слика 4)
 
 #### 2.4 Game over
 
 'Game over' екранот се појавува секој пат кога играчот ќе снема „обиди за погодување“ односно ке изгуби. На овој екран се наоѓа завршниот резултат од играта, како и опција за внесување на име и зачувување на резултат и запишување во Highscores листата.
 
 ![Game over](/Screenshots/GameOverName.png?raw=true "Game over")
-
-⋅(слика 5)
+   (слика 5)
 
 #### 2.5 Правила на играта
 
