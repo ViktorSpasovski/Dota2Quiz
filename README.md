@@ -1,8 +1,7 @@
 # Dota2 Quiz
 A Dota 2 Quiz game made for college purposes.
 Created and developed by Viktor Spasovski.
----
-***
+
 ___
 
 ## 1. Опис на апликацијата
